@@ -5,12 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo Yu-Gi-Oh Jo-Ken-Po Edition</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon">
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+
+    <!-- framework -->
+    <link rel="stylesheet" href="src/styles/buttons.css">
+    <link rel="stylesheet" href="src/styles/containers_and_frames.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- main style -->
+    <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 
 <body>
+    <audio id="bgm" loop>
+        <source src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
+    <div class="bg-video">
+        <video class="video" autoplay muted loop>
+            <source src="./src/assets/video/yugi.mp4">
+        </video>
+    </div>
+    <section class="container">
+        <aside class="container__left framed-golden-2">
+            <div class="scoreBox frame">
+                <span id="score-box">Win: 0 *** Lose: 0 </span>
+            </div>
+            <div class="my-card">
+                <img id="card-image">
+            </div>
+            <div class="card-details frame">
+                <p id="card-name">Selecione</p>
+                <p id="card-type">uma carta</p>
+            </div>
 
+        </aside>
+        <aside class="container__rigth">
+            <div class="card-box framed" id="computer-card">
+            </div>
+            <div class="card-versus">
+                <div class="versus-top">
+                    <div class="player-cards">
+                        <img id="player-card-field">
+                    </div>
+                    <img src="./src/assets/icons/millenium2.png" height="100px" alt="">
+                    <div class="computer-cards">
+                        <img id="computer-card-field">
+                    </div>
 
-
+                </div>
+                <div class="versus-bottom">
+                    <button id="next-duel" class="rpgui-button" onclick="resetDuel()"></button>
+                </div>
+            </div>
+            <div class="card-box framed" id="player-card">
+            </div>
+        </aside>
+    </section>
     <script src="./src/scripts/engine.js" defer></script>
 </body>
 
