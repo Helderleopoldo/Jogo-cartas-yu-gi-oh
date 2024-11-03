@@ -113,7 +113,8 @@ a:hover {
     flex-direction: column;
 }
 
-#card-name {
+#card-name,
+.scoreBox {
     font-size: .9rem;
 }
 
